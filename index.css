@@ -1,0 +1,109 @@
+ /* Propriétés générales de la page */
+ html {
+     height: 100%;
+ }
+
+ body {
+     display: table;
+     position: relative;
+     min-height: 100%;
+     margin: 0;
+     margin-bottom: 5em;
+     padding: 0;
+     width: 100%;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background: white url("img/plancher.jpg") no-repeat right bottom;
+     background-attachment: fixed;
+     background-size: cover;
+ }
+
+ #Logo {
+     display: block;
+     height: 75px;
+     background-color: black;
+     border-bottom-left-radius: 25px;
+ }
+
+ ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+ }
+
+ li {
+     float: left;
+     height: 75px;
+ }
+
+ #logoEmplacement {
+     float: right;
+ }
+
+ li a {
+     display: block;
+     color: white;
+     text-align: center;
+     padding: 15px;
+ }
+
+ li a:hover {
+     border-bottom: black solid;
+ }
+
+ #iconeAccueil {
+     height: 35px;
+ }
+
+ #iconeTravail {
+     height: 35px;
+ }
+
+ #titre {
+     margin-top: 5%;
+     text-align: center;
+     font-size: 4em;
+ }
+
+ #Presentation {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     flex-direction: row;
+     margin: auto;
+     margin-bottom: 5%;
+     border-radius: 35px;
+     text-align: justify;
+     width: 50%;
+ }
+
+ #imageProfil {
+     border-radius: 35px;
+     height: 10em;
+     padding: 15px;
+ }
+
+ #presTexte {
+     text-align: justify;
+     width: auto;
+ }
+
+ #footer {
+    margin-top: 5%;
+     display: table-row;
+     position: absolute;
+     bottom: 0;
+     display: flex;
+     float: left;
+     overflow: hidden;
+ }
+
+ #footer h4 {
+     margin: auto;
+     margin-left: 1em;
+ }
+
+ #footer img {
+     margin-left: 1em;
+     width: 35px;
+ }
