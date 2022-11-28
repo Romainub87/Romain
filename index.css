@@ -1,15 +1,14 @@
 /* Propriétés générales de la page */
 html {
     height: 100%;
+
 }
 
 body {
-    display: table;
-    position: relative;
-    min-height: 100%;
-    margin: 0;
-    margin-bottom: 5em;
     padding: 0;
+    margin: 0;
+    min-height: 100%;
+    margin-bottom: 5em;
     width: 100%;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: white url("img/plancher.jpg") no-repeat right bottom;
@@ -31,24 +30,26 @@ ul {
     overflow: hidden;
 }
 
-li {
-    float: left;
-    height: 75px;
-}
-
 #logoEmplacement {
     float: right;
 }
 
+li {
+    float: left;
+}
+
 li a {
+    padding: 20px;
     display: block;
     color: white;
-    text-align: center;
-    padding: 15px;
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
 }
 
 li a:hover {
-    border-bottom: black solid;
+    transform: scale(1.25);
+    transition: transform 300ms ease-in-out;
+
 }
 
 #iconeAccueil {
@@ -77,6 +78,15 @@ li a:hover {
     border: 4px solid black;
     box-shadow: 4px 4px 8px;
     margin-bottom: 2em;
+    transform:scale(1);
+    transition: transform 500ms ease-in-out;
+}
+
+#titre_encadre:hover {
+    background-color: black;
+    color: white;
+    transform:scale(1.25);
+    transition: transform 500ms ease-in-out;;
 }
 
 #ensemble_pres {
@@ -109,6 +119,13 @@ li a:hover {
     height: 10em;
     border: 3px solid white;
     box-shadow: -5px 5px 10px;
+    transform:scale(1);
+    transition: transform 500ms ease-in-out;
+}
+
+#imageProfil:hover {
+    transform:scale(1.25);
+    transition: transform 500ms ease-in-out;
 }
 
 #presTexte {
@@ -119,7 +136,15 @@ li a:hover {
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     font-weight: bolder;
     line-height:normal;
+    transform:scale(1);
+    transition: transform 500ms ease-in-out;
 }
+
+#presTexte:hover {
+    transform:scale(1.25);
+    transition: transform 500ms ease-in-out;
+}
+
 
 #footer {
     margin-top: 5%;
@@ -129,6 +154,13 @@ li a:hover {
     display: flex;
     float: left;
     overflow: hidden;
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
+}
+
+#footer:hover {
+    transform: scale(1.5) translate(20%, -30%);
+    transition: transform 300ms ease-in-out;
 }
 
 #footer h4 {
