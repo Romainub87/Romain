@@ -60,13 +60,14 @@ li a:hover {
 }
 
 #titre {
+    margin: 15px;
     text-align: center;
     font-size: 3.5em;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
 #titre_encadre {
-    display: flex;
+    display: block;
     background-color: white;
     width: fit-content;
     margin: auto;
@@ -78,16 +79,28 @@ li a:hover {
     margin-bottom: 2em;
 }
 
+#ensemble_pres {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 #Presentation {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto;
     margin-bottom: 5%;
     border-radius: 35px;
     text-align: justify;
-    width: 50%;
+    max-width: max-content;
+}
+
+#Presentation img {
+    margin-right: 200px;
+    margin-left: 0;
 }
 
 #imageProfil {
