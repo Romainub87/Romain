@@ -145,21 +145,34 @@ li a:hover {
     transition: transform 500ms ease-in-out;
 }
 
-
 #footer {
-    margin-top: 5%;
-    display: table-row;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
     position: absolute;
     bottom: 0;
-    display: flex;
-    float: left;
-    overflow: hidden;
     transform: scale(1);
     transition: transform 300ms ease-in-out;
 }
 
-#footer:hover {
-    transform: scale(1.5) translate(20%, -30%);
+#contacterTXT{
+    transform: translateY(-25%);
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#contacterTXT:hover {
+    color: white;
+    background-color: black;
+}
+
+#footer .contact {
+    padding-left: 40px;
+}
+
+#img-linkedin:hover {
+    transform: scale(1.5) translate(0%, -50%);
     transition: transform 300ms ease-in-out;
 }
 
@@ -168,7 +181,19 @@ li a:hover {
     margin-left: 1em;
 }
 
-#footer img {
-    margin-left: 1em;
+#img-linkedin {
     width: 35px;
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
+}
+
+#img-github {
+    width: 90px;
+    transform: scale(1)  translateY(-15%);
+    transition: transform 300ms ease-in-out;
+}
+
+#img-github:hover {
+    transform: scale(1.5) translate(0%, -50%);
+    transition: transform 300ms ease-in-out;
 }
