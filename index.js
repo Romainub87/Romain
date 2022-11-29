@@ -9,7 +9,16 @@ $("#titre_encadre").on("click", function () {
 });
 
 $("#Logo").on("click", function () {
-  $("#Logo").css({ "border-bottom-right-radius": "25px" 
-        
-});
+  $("#Logo").css({
+    "border-bottom-right-radius": "25px",
+    "padding-left": "15%",
+    "padding-right": "15%",
+  });
+  $("#logoEmplacement").css({
+    "position":"relative",
+    "margin":"auto"
+  })
+  $("#BarreNav").css({
+    "position":"fixed"
+  })
 });
