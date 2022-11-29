@@ -1,10 +1,15 @@
-
 // Etat initial de la page
-$(document).ready(function() {
-    $("#Presentation").hide();
-})
+$(document).on("ready", function () {
+  $("#Presentation").hide();
+});
 
 // Animation pour cacher/afficher l'image et le texte de présentation
 $("#titre_encadre").on("click", function () {
-    $("#Presentation").toggle(1000, "swing");
+  $("#Presentation").toggle(1000, "swing");
+});
+
+$("#Logo").on("click", function () {
+  $("#Logo").css({ "border-bottom-right-radius": "25px" 
+        
+});
 });
