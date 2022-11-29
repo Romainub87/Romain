@@ -27,8 +27,6 @@ body {
     border-bottom-left-radius: 25px;
 }
 
-#Logo::after {}
-
 ul {
     list-style-type: none;
     margin: 0;
