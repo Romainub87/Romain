@@ -10,6 +10,7 @@ $("#titre_encadre").on("click", function () {
     $("#Presentation").toggle(1000, "swing");
 });
 
+// Animation pour cacher/afficher les coordonnées et les liens
 $("#contacterTXT").on("click", function () {
     $(".contact").toggle(1000, "swing");
     $("#InfosCoord").toggle(1000, "swing");
@@ -20,6 +21,7 @@ $("#contacterTXT").on("click", function () {
     }
 });
 
+// Gestion des formes géométriques sur la page
 $( '.draggable' ).draggable();
 $( '.draggable' ).throwable();
 $('.draggable').css({'z-index': -1, 'position': 'absolute'})
