@@ -1,65 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>PortFolio</title>
     <link rel="stylesheet" href="./styles/index.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+  </head>
 
-<body>
+  <body>
     <nav id="BarreNav">
-        <ul>
-            <li>
-                <a href="index.html">
-                    <img id="iconeAccueil" src="img/maison.png" alt="iconeAccueil" />
-                </a>
-            </li>
-            <li>
-                <a href="PageProjet.html">
-                    <img id="iconeTravail" src="img/iconeTravail.png" alt="iconeTravail" />
-                </a>
-            </li>
-        </ul>
-        <div id="logoEmplacement">
-            <img id="Logo" src="img/Logo.png" alt="logo" />
-        </div>
+      <ul>
+        <li>
+          <a href="index.html">
+            <img id="iconeAccueil" src="img/maison.png" alt="iconeAccueil" />
+          </a>
+        </li>
+        <li>
+          <a href="PageProjet.html">
+            <img
+              id="iconeTravail"
+              src="img/iconeTravail.png"
+              alt="iconeTravail"
+            />
+          </a>
+        </li>
+      </ul>
+      <div id="logoEmplacement">
+        <img id="Logo" src="img/Logo.png" alt="logo" />
+      </div>
     </nav>
     <div id="ensemble_pres">
-        <div id="titre_encadre">
-            <h1 id="titre">ROMAIN CORDIER</h1>
-        </div>
-        <div id="Presentation">
-            <img id="imageProfil" src="img/PDP.jpg" alt="pdp" />
-            <p id="presTexte">
-                Je m'appelle Romain, j'ai 19 ans et je suis actuellement étudiant à l'IUT Informatique en 2ème année où
-                j'y passe un BUT Informatique afin de devenir développeur.
-            </p>
-        </div>
+      <div id="titre_encadre">
+        <h1 id="titre">ROMAIN CORDIER</h1>
+      </div>
+      <div id="Presentation">
+        <img id="imageProfil" src="img/PDP.jpg" alt="pdp" />
+        <p id="presTexte">
+          Je m'appelle Romain, j'ai 19 ans et je suis actuellement étudiant à
+          l'IUT Informatique en 2ème année où j'y passe un BUT Informatique afin
+          de devenir développeur.
+        </p>
+      </div>
     </div>
-   
+    <div
+      class="draggable"
+      style="height: 200px; width: 200px; bottom: 0; position: absolute;background-color: green;"
+      class="ui-widget-content"
+    ></div>
+    <div
+      class="draggable"
+      style="height: 200px; width: 200px; bottom: 0; position: absolute; background-color: red; border-radius: 100px"
+      class="ui-widget-content"
+    ></div>
+    <div
+      class="draggable"
+      style="height: 150px; width: 250px; bottom: 0; position: absolute;background-color: blue; border-radius: 130px / 80px;"
+      class="ui-widget-content"
+    ></div>
+
     <div id="footer">
-
-        <h4 id="contacterTXT"></h4>
-        <div id="InfosCoord" >
-            <h5 id="tel" class="coord">07.52.64.26.86</h5>
-            <h5 id="mail" class="coord">romaincordier33160@gmail.com</h5>
-        </div>
-        <div class="contact">
-            <a href="https://www.linkedin.com/in/romain-cordier-dev-web/">
-                <img id="img-linkedin" src="img/linkledin.png" alt="linkedin" />
-            </a>
-        </div>
-        <div class="contact">
-            <a href="https://github.com/Romainub87">
-                <img id="img-github" src="img/GitHub-Emblem-removebg-preview.png" alt="github" />
-            </a>
-        </div>
+      <h4 id="contacterTXT"></h4>
+      <div id="InfosCoord">
+        <h5 id="tel" class="coord">07.52.64.26.86</h5>
+        <h5 id="mail" class="coord">romaincordier33160@gmail.com</h5>
+      </div>
+      <div class="contact">
+        <a href="https://www.linkedin.com/in/romain-cordier-dev-web/">
+          <img id="img-linkedin" src="img/linkledin.png" alt="linkedin" />
+        </a>
+      </div>
+      <div class="contact">
+        <a href="https://github.com/Romainub87">
+          <img
+            id="img-github"
+            src="img/GitHub-Emblem-removebg-preview.png"
+            alt="github"
+          />
+        </a>
+      </div>
     </div>
-
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script
+      src="http://benahm.github.io/jquery.throwable/javascripts/jquery.throwable.js"
+      type="text/javascript"
+    ></script>
     <script src="./JS/index.js"></script>
-</body>
-
+  </body>
 </html>

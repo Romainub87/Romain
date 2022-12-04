@@ -19,3 +19,9 @@ $("#contacterTXT").on("click", function () {
         $('#contacterTXT').text('Mes liens');
     }
 });
+
+$( '.draggable' ).draggable();
+$( '.draggable' ).throwable();
+$('.draggable').css({'z-index': -1, 'position': 'absolute'})
+
+
