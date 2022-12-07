@@ -120,8 +120,4 @@ img {
   bottom: 10%;
   right: 10%;
   border-radius: 50px;
-  background: linear-gradient(to top, #3a3a3a, transparent 33% 100%), url("../img/ligue1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
