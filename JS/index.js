@@ -24,6 +24,6 @@ $("#contacterTXT").on("click", function () {
 // Gestion des formes géométriques sur la page
 $( '.draggable' ).draggable();
 $( '.draggable' ).throwable();
-$('.draggable').css({'z-index': -1, 'position': 'absolute'})
+$('.draggable').css({'z-index': -1})
 
 

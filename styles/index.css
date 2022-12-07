@@ -1,230 +1,220 @@
+@charset "UTF-8";
 /* Propriétés générales de la page */
-
 html {
-    height: 100%;
-    width: 100%;
-    overflow:hidden;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
-body {
-    padding: 0;
-    margin: 0;
-    max-height: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 100%;
-    margin-bottom: 5em;
-    width: 100%;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: white url("../img/plancher.jpg") no-repeat right bottom;
-    background-attachment: fixed;
-    background-size: cover;
+html body {
+  padding: 0;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+  margin-bottom: 5em;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: white url("../img/plancher.jpg") no-repeat right bottom;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #BarreNav {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
-#Logo {
-    height: 75px;
-    background-color: black;
-    border-bottom-left-radius: 25px;
+#BarreNav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+#BarreNav ul li {
+  float: left;
 }
 
-#logoEmplacement {
-    position: absolute;
-    right: 0;
+#BarreNav ul li a {
+  padding: 20px;
+  display: block;
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
 }
 
-li {
-    float: left;
+#BarreNav ul li a:hover {
+  transform: scale(1.25);
+  transition: transform 300ms ease-in-out;
 }
 
-li a {
-    padding: 20px;
-    display: block;
-    color: white;
-    transform: scale(1);
-    transition: transform 300ms ease-in-out;
+#BarreNav ul li a #iconeAccueil {
+  height: 35px;
 }
 
-li a:hover {
-    transform: scale(1.25);
-    transition: transform 300ms ease-in-out;
+#BarreNav ul li a #iconeTravail {
+  height: 35px;
 }
 
-#iconeAccueil {
-    height: 35px;
+#BarreNav #logoEmplacement {
+  position: absolute;
+  right: 0;
 }
 
-#iconeTravail {
-    height: 35px;
-}
-
-#titre {
-    margin: 15px;
-    text-align: center;
-    font-size: 3.5em;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-}
-
-#titre_encadre {
-    display: block;
-    background-color: white;
-    width: fit-content;
-    margin: auto;
-    padding-left: 15px;
-    padding-right: 25px;
-    border-radius: 25px;
-    border: 4px solid black;
-    box-shadow: 4px 4px 8px;
-    margin-bottom: 2em;
-    transform: scale(1);
-    transition: transform 500ms ease-in-out;
-    cursor: pointer;
-}
-
-#titre_encadre:hover {
-    background-color: black;
-    color: white;
-    transform: scale(1.25);
-    transition: transform 500ms ease-in-out;
+#BarreNav #logoEmplacement #Logo {
+  height: 90px;
+  background-color: black;
+  border-bottom-left-radius: 25px;
 }
 
 #ensemble_pres {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#Presentation {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-    margin-bottom: 5%;
-    margin-top: 7%;
-    border-radius: 35px;
-    text-align: justify;
-    max-width: max-content;
+#ensemble_pres #titre_encadre {
+  display: block;
+  background-color: white;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 25px;
+  border-radius: 25px;
+  border: 4px solid black;
+  box-shadow: 4px 4px 8px;
+  margin-bottom: 2em;
+  transform: scale(1);
+  transition: transform 500ms ease-in-out;
+  cursor: pointer;
 }
 
-#Presentation img {
-    margin-right: 200px;
-    margin-left: 0;
+#ensemble_pres #titre_encadre:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.25);
+  transition: transform 500ms ease-in-out;
 }
 
-#imageProfil {
-    display: flex;
-    border-radius: 35px;
-    height: 10em;
-    border: 3px solid white;
-    box-shadow: -5px 5px 10px;
-    transform: scale(1);
-    transition: transform 500ms ease-in-out;
+#ensemble_pres #titre_encadre #titre {
+  margin: 15px;
+  text-align: center;
+  font-size: 3.5em;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
-#imageProfil:hover {
-    transform: scale(1.25);
-    transition: transform 500ms ease-in-out;
+#ensemble_pres #Presentation {
+  display: flex;
+  justify-content: space-between;
 }
 
-#presTexte {
-    display: flex;
-    width: fit-content;
-    text-align: justify;
-    width: 200px;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-weight: bolder;
-    line-height: normal;
-    transform: scale(1);
-    transition: transform 500ms ease-in-out;
+#ensemble_pres #Presentation #imageProfil {
+  display: flex;
+  border-radius: 35px;
+  height: 10em;
+  border: 3px solid white;
+  box-shadow: -5px 5px 10px;
+  transform: scale(1);
+  transition: transform 500ms ease-in-out;
 }
 
-#presTexte:hover {
-    transform: scale(1.25);
-    transition: transform 500ms ease-in-out;
+#ensemble_pres #Presentation #imageProfil:hover {
+  transform: scale(1.25);
+  transition: transform 500ms ease-in-out;
 }
 
-#InfosCoord {
-    display: flex;
-    bottom: 0;
+#ensemble_pres #Presentation #presTexte {
+  width: 210px;
+  text-align: justify;
+  font-weight: bold;
+  line-height: normal;
+  transform: scale(1);
+  transition: transform 500ms ease-in-out;
 }
 
-.coord:first-child {
-    margin-left: 30px;
+#ensemble_pres #Presentation #presTexte:hover {
+  transform: scale(1.25);
+  transition: transform 500ms ease-in-out;
 }
 
-.coord {
-    margin-left: 50px;
-    padding-left: 10px;
-    transform-origin: bottom center;
-    transform: scale(1) translateY(-55%);
-    transition: transform 300ms ease-in-out;
+.draggable {
+  margin-left: auto;
+  height: fit-content;
+  width: fit-content;
 }
 
-.coord:hover {
-    transform: scale(1.5) translate(0%, -50%);
-    transition: transform 300ms ease-in-out;
+.draggable img {
+  width: 200px;
+  height: 200px;
 }
 
 #footer {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    position: absolute;
-    bottom: 0;
-    transform: scale(1);
-    transition: transform 0ms ease-in-out;
-}
-
-#contacterTXT {
-    transform: translateY(-25%);
-    border: 2px solid;
-    padding: 10px;
-    border-radius: 25px;
-    margin: auto;
-    margin-left: 1em;
-}
-
-#contacterTXT:hover {
-    color: #ff8800;
-    background-color: black;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  transform: scale(1);
+  transition: transform 0ms ease-in-out;
 }
 
 #footer .contact {
-    padding-left: 40px;
+  padding-left: 40px;
 }
 
-#img-linkedin {
-    width: 35px;
-    transform: scale(1);
-    transition: transform 300ms ease-in-out;
+#footer .contact #img-linkedin {
+  width: 35px;
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
 }
 
-#img-linkedin:hover {
-    transform: scale(1.5) translate(0%, -50%);
-    transition: transform 300ms ease-in-out;
+#footer .contact #img-linkedin:hover {
+  transform: scale(1.5) translate(0%, -50%);
+  transition: transform 300ms ease-in-out;
 }
 
-#img-github {
-    width: 90px;
-    transform: scale(1) translateY(-15%);
-    transition: transform 300ms ease-in-out;
+#footer .contact #img-github {
+  width: 90px;
+  transform: scale(1) translateY(-15%);
+  transition: transform 300ms ease-in-out;
 }
 
-#img-github:hover {
-    transform: scale(1.5) translate(0%, -50%);
-    transition: transform 300ms ease-in-out;
+#footer .contact #img-github:hover {
+  transform: scale(1.5) translate(0%, -50%);
+  transition: transform 300ms ease-in-out;
+}
+
+#footer #contacterTXT {
+  transform: translateY(-25%);
+  border: 2px solid;
+  padding: 10px;
+  border-radius: 25px;
+  margin: auto;
+  margin-left: 1em;
+}
+
+#footer #contacterTXT:hover {
+  color: #ff8800;
+  background-color: black;
+  cursor: pointer;
+}
+
+#footer #InfosCoord {
+  display: flex;
+  bottom: 0;
+}
+
+#footer #InfosCoord .coord {
+  margin-left: 50px;
+  padding-left: 10px;
+  transform-origin: bottom center;
+  transform: scale(1) translateY(-55%);
+  transition: transform 300ms ease-in-out;
+}
+
+#footer #InfosCoord .coord:hover {
+  transform: scale(1.5) translate(0%, -50%);
+  transition: transform 300ms ease-in-out;
+}
+
+#footer #InfosCoord .coord:first-child {
+  margin-left: 30px;
 }
