@@ -1,13 +1,26 @@
-#Logo {
-  display: block;
-  height: max-content;
-  background-color: black;
-  border-bottom-left-radius: 25px;
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: white url("../img/plancher.jpg") no-repeat right bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  user-select: none;
+  margin: 0;
 }
 
 #BarreNav {
-  display: flex;
+  position: absolute;
   width: 100%;
+  top: 0;
   z-index: 1;
 
   ul {
@@ -45,66 +58,73 @@
     right: 0;
 
     #Logo {
-      height: 90px;
       background-color: black;
+      height: 90px;
       border-bottom-left-radius: 25px;
     }
   }
 }
 
-// style slider
+// style slider projets
 
-$bg-color: #222;
-$margin: 20px;
-
-body {
-  color: #333;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: white url("../img/plancher.jpg") no-repeat right bottom;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.ensemble-projet {
-  position: relative;
-
-  &:before,
-  &:after {
-    position: absolute;
-    top: 0;
-
-    content: "";
-    display: block;
-    width: $margin;
-    height: 100%;
-  }
-}
-
-.list-projet {
-  position: relative;
+img {
+  display: block;
   width: 100%;
-  white-space: nowrap;
-  font-size: 0;
-  padding: 0;
-  cursor: pointer;
-
-  &.active {
-    cursor: grab;
-  }
+  height: auto;
 }
 
-.projet {
-  background-color: #222;
-  display: inline-block;
-  user-select: none;
-  list-style: none;
-  width: 100%;
+.slider {
+  position: relative;
   height: 100%;
-  color: $bg-color;
-  font-size: 33px;
-  font-weight: bold;
+  width: 100%;
+  cursor: grab;
+
+  &.is-grabbing {
+    cursor: grabbing;
+  }
+}
+
+.slider__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60vw;
+  height: 60vh;
+  padding: 1rem;
+}
+
+.projet-title {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  text-transform: uppercase;
+  font-family: "Mukta", sans-serif;
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.slide__bg {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  bottom: 10%;
+  right: 10%;
+  border-radius: 50px;
+  background: linear-gradient(to top, rgb(58, 58, 58), transparent 33% 100% ),
+    url("../img/ligue1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
