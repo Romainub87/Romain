@@ -9,8 +9,6 @@ body {
   width: 100%;
   flex-direction: column;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-attachment: fixed;
-  background-size: cover;
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
@@ -40,9 +38,11 @@ body {
 }
 
 #BarreNav ul {
+  z-index: 2;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 #BarreNav ul li {
@@ -50,15 +50,12 @@ body {
 }
 
 #BarreNav ul li a {
-  padding: 20px;
-  display: block;
-  transform: scale(1);
-  transition: transform 300ms ease-in-out;
+  margin: 20px;
 }
 
 #BarreNav ul li a:hover {
-  transform: scale(1.25);
-  transition: transform 300ms ease-in-out;
+  background-color: black;
+  border-radius: 75px;
 }
 
 #BarreNav ul li a #iconeAccueil {
@@ -72,6 +69,7 @@ body {
 #logoEmplacement {
   position: absolute;
   right: 0;
+  z-index: 2;
 }
 
 #logoEmplacement #Logo {
@@ -81,11 +79,12 @@ body {
 
 #Home {
   height: 100vh;
-  background-color: #ff8800;
-  z-index: 1000;
+  background-color: #ff6600;
+  border-bottom: 10px solid whitesmoke;
 }
 
 #Home #ensemble_pres {
+  z-index: 2;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -157,6 +156,7 @@ body {
 .draggable {
   height: fit-content;
   width: fit-content;
+  z-index: 1;
 }
 
 .draggable img {
@@ -165,6 +165,7 @@ body {
 }
 
 #footer {
+  z-index: 2;
   display: flex;
   justify-content: space-around;
   position: absolute;
@@ -209,7 +210,7 @@ body {
 }
 
 #footer #contacterTXT:hover {
-  color: #ff8800;
+  color: #c36a05;
   background-color: black;
   cursor: pointer;
 }
@@ -239,4 +240,5 @@ body {
 #Projets {
   display: flex;
   height: 100vh;
+  background-color: #3d4852;
 }
