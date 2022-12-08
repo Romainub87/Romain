@@ -1,70 +1,98 @@
 @charset "UTF-8";
 /* Propriétés générales de la page */
-html {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-html body {
+body {
   padding: 0;
   margin: 0;
   min-width: 100%;
   min-height: 100%;
   margin-bottom: 5em;
   width: 100%;
+  flex-direction: column;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: white url("../img/plancher.jpg") no-repeat right bottom;
   background-attachment: fixed;
   background-size: cover;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  height: 2px;
+  width: 8px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3d4852;
+  border-radius: 8px;
 }
 
 #BarreNav {
   display: flex;
-  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
+  background-color: #f5f5f5;
 }
+
 #BarreNav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
+
 #BarreNav ul li {
   float: left;
 }
+
 #BarreNav ul li a {
   padding: 20px;
   display: block;
   transform: scale(1);
   transition: transform 300ms ease-in-out;
 }
+
 #BarreNav ul li a:hover {
   transform: scale(1.25);
   transition: transform 300ms ease-in-out;
 }
+
 #BarreNav ul li a #iconeAccueil {
   height: 35px;
 }
+
 #BarreNav ul li a #iconeTravail {
   height: 35px;
 }
-#BarreNav #logoEmplacement {
+
+#logoEmplacement {
   position: absolute;
   right: 0;
 }
-#BarreNav #logoEmplacement #Logo {
-  height: 90px;
+
+#logoEmplacement #Logo {
+  height: 10vh;
   background-color: black;
-  border-bottom-left-radius: 25px;
 }
 
-#ensemble_pres {
+#Home {
+  height: 100vh;
+  background-color: #ff8800;
+  z-index: 1000;
+}
+
+#Home #ensemble_pres {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#ensemble_pres #titre_encadre {
-  display: block;
+
+#Home #ensemble_pres #titre_encadre {
   background-color: white;
   margin: auto;
   padding-left: 15px;
@@ -77,23 +105,27 @@ html body {
   transition: transform 500ms ease-in-out;
   cursor: pointer;
 }
-#ensemble_pres #titre_encadre:hover {
+
+#Home #ensemble_pres #titre_encadre:hover {
   background-color: black;
   color: white;
   transform: scale(1.25);
   transition: transform 500ms ease-in-out;
 }
-#ensemble_pres #titre_encadre #titre {
+
+#Home #ensemble_pres #titre_encadre #titre {
   margin: 15px;
   text-align: center;
   font-size: 3.5em;
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
-#ensemble_pres #Presentation {
+
+#Home #Presentation {
   display: flex;
   justify-content: space-between;
 }
-#ensemble_pres #Presentation #imageProfil {
+
+#Home #Presentation #imageProfil {
   display: flex;
   border-radius: 35px;
   height: 10em;
@@ -102,11 +134,13 @@ html body {
   transform: scale(1);
   transition: transform 500ms ease-in-out;
 }
-#ensemble_pres #Presentation #imageProfil:hover {
+
+#Home #Presentation #imageProfil:hover {
   transform: scale(1.25);
   transition: transform 500ms ease-in-out;
 }
-#ensemble_pres #Presentation #presTexte {
+
+#Home #Presentation #presTexte {
   width: 210px;
   text-align: justify;
   font-weight: bold;
@@ -114,16 +148,17 @@ html body {
   transform: scale(1);
   transition: transform 500ms ease-in-out;
 }
-#ensemble_pres #Presentation #presTexte:hover {
+
+#Home #Presentation #presTexte:hover {
   transform: scale(1.25);
   transition: transform 500ms ease-in-out;
 }
 
 .draggable {
-  margin-left: auto;
   height: fit-content;
   width: fit-content;
 }
+
 .draggable img {
   width: 200px;
   height: 200px;
@@ -137,27 +172,33 @@ html body {
   transform: scale(1);
   transition: transform 0ms ease-in-out;
 }
+
 #footer .contact {
   padding-left: 40px;
 }
+
 #footer .contact #img-linkedin {
   width: 35px;
   transform: scale(1);
   transition: transform 300ms ease-in-out;
 }
+
 #footer .contact #img-linkedin:hover {
   transform: scale(1.5) translate(0%, -50%);
   transition: transform 300ms ease-in-out;
 }
+
 #footer .contact #img-github {
   width: 90px;
   transform: scale(1) translateY(-15%);
   transition: transform 300ms ease-in-out;
 }
+
 #footer .contact #img-github:hover {
   transform: scale(1.5) translate(0%, -50%);
   transition: transform 300ms ease-in-out;
 }
+
 #footer #contacterTXT {
   transform: translateY(-25%);
   border: 2px solid;
@@ -166,15 +207,18 @@ html body {
   margin: auto;
   margin-left: 1em;
 }
+
 #footer #contacterTXT:hover {
   color: #ff8800;
   background-color: black;
   cursor: pointer;
 }
+
 #footer #InfosCoord {
   display: flex;
   bottom: 0;
 }
+
 #footer #InfosCoord .coord {
   margin-left: 50px;
   padding-left: 10px;
@@ -182,12 +226,17 @@ html body {
   transform: scale(1) translateY(-55%);
   transition: transform 300ms ease-in-out;
 }
+
 #footer #InfosCoord .coord:hover {
   transform: scale(1.5) translate(0%, -50%);
   transition: transform 300ms ease-in-out;
 }
+
 #footer #InfosCoord .coord:first-child {
   margin-left: 30px;
 }
 
-/*# sourceMappingURL=index.css.map */
+#Projets {
+  display: flex;
+  height: 100vh;
+}

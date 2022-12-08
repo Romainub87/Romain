@@ -26,3 +26,11 @@ $('.draggable').draggable();
 $('.draggable').throwable();
 $('.draggable').css({ 'z-index': -1 })
 
+var header = document.getElementById("#nav");
+
+function scrolled(){
+	header.className = (window.pageYOffset >= document.documentElement.clientHeight - header.offsetHeight) ? "fixed" : "";
+}
+
+addEventListener("scroll", scrolled, false);
+
