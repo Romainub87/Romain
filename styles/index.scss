@@ -30,6 +30,15 @@ body {
   border-radius: 8px;
 }
 
+@media screen and (max-width: 1024px) {
+  .draggable {
+    opacity: 0;
+  }
+  #Logo {
+    opacity: 0;
+  }
+}
+
 // Style de la barre Nav
 #BarreNav {
   display: flex;
@@ -156,6 +165,8 @@ body {
     }
   }
 }
+
+
 
 .draggable {
   height: fit-content;
