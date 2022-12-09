@@ -1,13 +1,10 @@
 /* Propriétés générales de la page */
-
+html,
 body {
   padding: 0;
   margin: 0;
   min-width: 100%;
   min-height: 100%;
-  margin-bottom: 5em;
-  width: 100%;
-  flex-direction: column;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -30,53 +27,6 @@ body {
   border-radius: 8px;
 }
 
-@media screen and (max-width: 1024px) {
-  .draggable {
-    opacity: 0;
-  }
-  #Logo {
-    opacity: 0;
-  }
-}
-
-// Style de la barre Nav
-#BarreNav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 10vh;
-  background-color: #f5f5f5;
-
-
-  ul {
-    z-index: 2;
-    list-style-type: none;
-    padding: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-
-    li {
-      float: left;
-      a {
-        margin: 20px;
-
-        &:hover {
-          background-color: black;
-          border-radius: 75px;
-        }
-
-        #iconeAccueil {
-          height: 35px;
-        }
-
-        #iconeTravail {
-          height: 35px;
-        }
-      }
-    }
-  }
-}
-
 // Style du logo
 #logoEmplacement {
   position: absolute;
@@ -84,7 +34,6 @@ body {
   z-index: 2;
 
   #Logo {
-    height: 10vh;
     background-color: black;
   }
 }
@@ -94,6 +43,42 @@ body {
   height: 100vh;
   background-color: rgb(255, 102, 0);
   border-bottom: 10px solid whitesmoke;
+
+  // Style de la barre Nav
+  #BarreNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f5f5f5;
+
+    ul {
+      z-index: 2;
+      list-style-type: none;
+      padding: 10px;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      li {
+        float: left;
+        a {
+          margin: 20px;
+
+          &:hover {
+            background-color: black;
+            border-radius: 75px;
+          }
+
+          #iconeAccueil {
+            height: 35px;
+          }
+
+          #iconeTravail {
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
 
   #ensemble_pres {
     z-index: 2;
@@ -132,9 +117,6 @@ body {
   }
 
   #Presentation {
-    display: flex;
-    justify-content: space-between;
-
     #imageProfil {
       display: flex;
       border-radius: 35px;
@@ -166,31 +148,16 @@ body {
   }
 }
 
-
-
-.draggable {
-  height: fit-content;
-  width: fit-content;
-  z-index: 1;
-
-  img {
-    width: 200px;
-    height: 200px;
-  }
-}
-
 #footer {
   z-index: 2;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   position: absolute;
   bottom: 0;
   transform: scale(1);
   transition: transform 0ms ease-in-out;
 
   .contact {
-    padding-left: 40px;
-
     #img-linkedin {
       width: 35px;
       transform: scale(1);
@@ -213,47 +180,8 @@ body {
       }
     }
   }
-
-  #contacterTXT {
-    transform: translateY(-25%);
-    border: 2px solid;
-    padding: 10px;
-    border-radius: 25px;
-    margin: auto;
-    margin-left: 1em;
-
-    &:hover {
-      color: #c36a05;
-      background-color: black;
-      cursor: pointer;
-    }
-  }
-
-  #InfosCoord {
-    display: flex;
-    bottom: 0;
-
-    .coord {
-      margin-left: 50px;
-      padding-left: 10px;
-      transform-origin: bottom center;
-      transform: scale(1) translateY(-55%);
-      transition: transform 300ms ease-in-out;
-
-      &:hover {
-        transform: scale(1.5) translate(0%, -50%);
-        transition: transform 300ms ease-in-out;
-      }
-
-      &:first-child {
-        margin-left: 30px;
-      }
-    }
-  }
 }
 
 #Projets {
-  display: flex;
-  height: 100vh;
   background-color: #3d4852;
 }
