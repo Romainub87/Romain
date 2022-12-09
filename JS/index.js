@@ -1,7 +1,7 @@
 // Etat initial de la page
 $(document).on("ready", function () {
   $("#Presentation").hide();
-  $("#InfosCoord").hide();
+  $(".coord").hide();
   $("#contacterTXT").text("Mes liens");
 });
 
@@ -12,12 +12,14 @@ $("#titre_encadre").on("click", function () {
 
 // Animation pour cacher/afficher les coordonnées et les liens
 $("#contacterTXT").on("click", function () {
-  $(".contact").toggle(1000, "swing");
-  $("#InfosCoord").toggle(1000, "swing");
   if ($("#contacterTXT").text() == "Mes liens") {
     $("#contacterTXT").text("Mes coordonnées");
+    $(".contact").hide();
+    $(".coord").show();
   } else {
     $("#contacterTXT").text("Mes liens");
+    $(".contact").show();
+    $(".coord").hide();
   }
 });
 

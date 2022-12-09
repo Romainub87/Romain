@@ -1,13 +1,11 @@
 @charset "UTF-8";
 /* Propriétés générales de la page */
+html,
 body {
   padding: 0;
   margin: 0;
-  min-width: 100%;
+  max-width: 100%;
   min-height: 100%;
-  margin-bottom: 5em;
-  width: 100%;
-  flex-direction: column;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -29,43 +27,6 @@ body {
   border-radius: 8px;
 }
 
-#BarreNav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 10vh;
-  background-color: #f5f5f5;
-}
-
-#BarreNav ul {
-  z-index: 2;
-  list-style-type: none;
-  padding: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-#BarreNav ul li {
-  float: left;
-}
-
-#BarreNav ul li a {
-  margin: 20px;
-}
-
-#BarreNav ul li a:hover {
-  background-color: black;
-  border-radius: 75px;
-}
-
-#BarreNav ul li a #iconeAccueil {
-  height: 35px;
-}
-
-#BarreNav ul li a #iconeTravail {
-  height: 35px;
-}
-
 #logoEmplacement {
   position: absolute;
   right: 0;
@@ -83,7 +44,47 @@ body {
   border-bottom: 10px solid whitesmoke;
 }
 
-#Home #ensemble_pres {
+#Home #BarreNav {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+#Home #BarreNav ul {
+  list-style-type: none;
+  display: flex;
+  position: fixed;
+}
+
+#Home #BarreNav ul .item-nav {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#Home #BarreNav ul .item-nav .lien-nav {
+  color: white;
+  text-decoration-line: none;
+  z-index: 5;
+}
+
+#Home #BarreNav ul .item-nav .lien-nav:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background-color: black;
+  transform: scale(0);
+  transition: width 200ms ease-in-out;
+}
+
+#Home #BarreNav ul .item-nav .lien-nav:hover:after {
+  width: 100%;
+}
+
+#ensemble_pres {
   z-index: 2;
   position: absolute;
   top: 50%;
@@ -91,7 +92,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-#Home #ensemble_pres #titre_encadre {
+#ensemble_pres #titre_encadre {
   background-color: white;
   margin: auto;
   padding-left: 15px;
@@ -105,26 +106,27 @@ body {
   cursor: pointer;
 }
 
-#Home #ensemble_pres #titre_encadre:hover {
+#ensemble_pres #titre_encadre:hover {
   background-color: black;
   color: white;
   transform: scale(1.25);
   transition: transform 500ms ease-in-out;
 }
 
-#Home #ensemble_pres #titre_encadre #titre {
+#ensemble_pres #titre_encadre #titre {
   margin: 15px;
   text-align: center;
   font-size: 3.5em;
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
-#Home #Presentation {
+#Presentation {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-#Home #Presentation #imageProfil {
+#Presentation #imageProfil {
   display: flex;
   border-radius: 35px;
   height: 10em;
@@ -134,12 +136,12 @@ body {
   transition: transform 500ms ease-in-out;
 }
 
-#Home #Presentation #imageProfil:hover {
+#Presentation #imageProfil:hover {
   transform: scale(1.25);
   transition: transform 500ms ease-in-out;
 }
 
-#Home #Presentation #presTexte {
+#Presentation #presTexte {
   width: 210px;
   text-align: justify;
   font-weight: bold;
@@ -148,97 +150,80 @@ body {
   transition: transform 500ms ease-in-out;
 }
 
-#Home #Presentation #presTexte:hover {
+#Presentation #presTexte:hover {
   transform: scale(1.25);
   transition: transform 500ms ease-in-out;
 }
 
-.draggable {
-  height: fit-content;
-  width: fit-content;
-  z-index: 1;
-}
-
-.draggable img {
-  width: 200px;
-  height: 200px;
-}
-
 #footer {
   z-index: 2;
+  width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-around;
   position: absolute;
-  bottom: 0;
+  bottom: 3vh;
   transform: scale(1);
   transition: transform 0ms ease-in-out;
+  flex-direction: row;
 }
 
-#footer .contact {
-  padding-left: 40px;
+#footer #contacterTXT {
+  font-size: 2.5vh;
+  position: absolute;
+  bottom: 5vh;
+  border-radius: 50px;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 2px solid black;
+}
+
+#footer #contacterTXT:hover {
+  cursor: pointer;
+  background-color: black;
+  color: #ff6600;
+  border-radius: 50px;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 #footer .contact #img-linkedin {
-  width: 35px;
+  width: 50px;
   transform: scale(1);
   transition: transform 300ms ease-in-out;
 }
 
 #footer .contact #img-linkedin:hover {
-  transform: scale(1.5) translate(0%, -50%);
+  transform: scale(1.5);
   transition: transform 300ms ease-in-out;
 }
 
 #footer .contact #img-github {
-  width: 90px;
-  transform: scale(1) translateY(-15%);
+  width: 120px;
+  transform: scale(1);
   transition: transform 300ms ease-in-out;
 }
 
 #footer .contact #img-github:hover {
-  transform: scale(1.5) translate(0%, -50%);
+  transform: scale(1.5);
   transition: transform 300ms ease-in-out;
 }
 
-#footer #contacterTXT {
-  transform: translateY(-25%);
-  border: 2px solid;
-  padding: 10px;
-  border-radius: 25px;
-  margin: auto;
-  margin-left: 1em;
-}
-
-#footer #contacterTXT:hover {
-  color: #c36a05;
-  background-color: black;
-  cursor: pointer;
-}
-
-#footer #InfosCoord {
+#footer .coord {
   display: flex;
-  bottom: 0;
-}
-
-#footer #InfosCoord .coord {
-  margin-left: 50px;
-  padding-left: 10px;
-  transform-origin: bottom center;
-  transform: scale(1) translateY(-55%);
+  justify-content: space-between;
+  transform: scale(1);
   transition: transform 300ms ease-in-out;
 }
 
-#footer #InfosCoord .coord:hover {
-  transform: scale(1.5) translate(0%, -50%);
+#footer .coord:hover {
+  transform: scale(1.5);
   transition: transform 300ms ease-in-out;
-}
-
-#footer #InfosCoord .coord:first-child {
-  margin-left: 30px;
 }
 
 #Projets {
-  display: flex;
   height: 100vh;
   background-color: #3d4852;
 }
