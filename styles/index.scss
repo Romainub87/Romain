@@ -62,27 +62,28 @@ $orange: rgb(255, 102, 0);
       .item-nav {
         margin: 30px;
         display: flex;
+        position: relative;
         flex-direction: column;
 
         .lien-nav {
-          color: white;
-          text-decoration-line: none;
-          z-index: 5;
-
-          &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 0%;
-            height: 3px;
-            background-color: black;
-            transform: scale(0);
-            transition: width 200ms ease-in-out;
-          }
-
-          &:hover:after {
-            width: 100%;
-          }
+          position: relative;
+        }
+        .lien-nav::after {
+          content: "";
+          transform-origin: 0 0;
+          transform: scaleX(0);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 0.4em;
+          background: #78ab4e;
+          z-index: -1;
+          opacity: 0.8;
+          transition: transform 0.3s;
+        }
+        .lien-nav:hover::after {
+          transform: scaleX(1);
         }
       }
     }
