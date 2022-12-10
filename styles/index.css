@@ -1,10 +1,9 @@
 @charset "UTF-8";
 /* Propriétés générales de la page */
-html,
 body {
   padding: 0;
   margin: 0;
-  max-width: 100%;
+  min-width: 100%;
   min-height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: scroll;
@@ -32,7 +31,6 @@ body {
   right: 0;
   z-index: 2;
 }
-
 #logoEmplacement #Logo {
   height: 10vh;
   background-color: black;
@@ -40,59 +38,50 @@ body {
 
 #Home {
   height: 100vh;
-  background-color: #ff6600;
+  background-color: rgb(255, 102, 0);
   border-bottom: 10px solid whitesmoke;
 }
-
 #Home #BarreNav {
   height: 10vh;
   display: flex;
   align-items: center;
-  z-index: 5;
 }
-
 #Home #BarreNav ul {
+  z-index: 5;
   list-style-type: none;
   display: flex;
   position: fixed;
+  background-color: #000000;
+  margin: 0;
+  margin-left: 10px;
+  border-radius: 100px;
+  padding: 20px;
 }
-
 #Home #BarreNav ul .item-nav {
-  margin: 30px;
   display: flex;
   flex-direction: column;
+  margin-left: 30px;
+  padding-right: 10px;
 }
-
+#Home #BarreNav ul .item-nav:nth-child(1) {
+  margin-left: 0;
+  padding-left: 10px;
+}
 #Home #BarreNav ul .item-nav .lien-nav {
   color: white;
   text-decoration-line: none;
-  z-index: 5;
 }
-
-#Home #BarreNav ul .item-nav .lien-nav:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0%;
-  height: 3px;
-  background-color: black;
-  transform: scale(0);
-  transition: width 200ms ease-in-out;
+#Home #BarreNav ul .item-nav .lien-nav:hover {
+  color: rgb(255, 102, 0);
 }
-
-#Home #BarreNav ul .item-nav .lien-nav:hover:after {
-  width: 100%;
-}
-
-#ensemble_pres {
+#Home #ensemble_pres {
   z-index: 2;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-#ensemble_pres #titre_encadre {
+#Home #ensemble_pres #titre_encadre {
   background-color: white;
   margin: auto;
   padding-left: 15px;
@@ -105,28 +94,24 @@ body {
   transition: transform 500ms ease-in-out;
   cursor: pointer;
 }
-
-#ensemble_pres #titre_encadre:hover {
+#Home #ensemble_pres #titre_encadre:hover {
   background-color: black;
   color: white;
   transform: scale(1.25);
   transition: transform 500ms ease-in-out;
 }
-
-#ensemble_pres #titre_encadre #titre {
+#Home #ensemble_pres #titre_encadre #titre {
   margin: 15px;
   text-align: center;
   font-size: 3.5em;
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
-
-#Presentation {
+#Home #ensemble_pres #Presentation {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
-#Presentation #imageProfil {
+#Home #ensemble_pres #Presentation #imageProfil {
   display: flex;
   border-radius: 35px;
   height: 10em;
@@ -135,13 +120,11 @@ body {
   transform: scale(1);
   transition: transform 500ms ease-in-out;
 }
-
-#Presentation #imageProfil:hover {
+#Home #ensemble_pres #Presentation #imageProfil:hover {
   transform: scale(1.25);
   transition: transform 500ms ease-in-out;
 }
-
-#Presentation #presTexte {
+#Home #ensemble_pres #Presentation #presTexte {
   width: 210px;
   text-align: justify;
   font-weight: bold;
@@ -149,13 +132,11 @@ body {
   transform: scale(1);
   transition: transform 500ms ease-in-out;
 }
-
-#Presentation #presTexte:hover {
+#Home #ensemble_pres #Presentation #presTexte:hover {
   transform: scale(1.25);
   transition: transform 500ms ease-in-out;
 }
-
-#footer {
+#Home #footer {
   z-index: 2;
   width: 100%;
   display: flex;
@@ -167,8 +148,7 @@ body {
   transition: transform 0ms ease-in-out;
   flex-direction: row;
 }
-
-#footer #contacterTXT {
+#Home #footer #contacterTXT {
   font-size: 2.5vh;
   position: absolute;
   bottom: 5vh;
@@ -178,47 +158,40 @@ body {
   padding-right: 25px;
   border: 2px solid black;
 }
-
-#footer #contacterTXT:hover {
+#Home #footer #contacterTXT:hover {
   cursor: pointer;
   background-color: black;
-  color: #ff6600;
+  color: rgb(255, 102, 0);
   border-radius: 50px;
   padding: 5px;
   padding-left: 25px;
   padding-right: 25px;
 }
-
-#footer .contact #img-linkedin {
+#Home #footer .contact #img-linkedin {
   width: 50px;
   transform: scale(1);
   transition: transform 300ms ease-in-out;
 }
-
-#footer .contact #img-linkedin:hover {
+#Home #footer .contact #img-linkedin:hover {
   transform: scale(1.5);
   transition: transform 300ms ease-in-out;
 }
-
-#footer .contact #img-github {
+#Home #footer .contact #img-github {
   width: 120px;
   transform: scale(1);
   transition: transform 300ms ease-in-out;
 }
-
-#footer .contact #img-github:hover {
+#Home #footer .contact #img-github:hover {
   transform: scale(1.5);
   transition: transform 300ms ease-in-out;
 }
-
-#footer .coord {
+#Home #footer .coord {
   display: flex;
   justify-content: space-between;
   transform: scale(1);
   transition: transform 300ms ease-in-out;
 }
-
-#footer .coord:hover {
+#Home #footer .coord:hover {
   transform: scale(1.5);
   transition: transform 300ms ease-in-out;
 }
@@ -227,3 +200,62 @@ body {
   height: 100vh;
   background-color: #3d4852;
 }
+#Projets .slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#Projets .slider-container .slider {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+#Projets .slider-container .slider .slides {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+#Projets .slider-container .slider .slides .slide {
+  z-index: 0;
+  display: flex;
+  align-items: 0;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100vh;
+  margin-right: 0px;
+  transform-origin: center center;
+  transform: scale(1);
+  scroll-snap-align: center;
+}
+#Projets .slider-container .slider .slides .slide img {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 65%;
+}
+#Projets .slider-container .slider .slides .slide .description {
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 40%;
+  width: 25%;
+  left: 5%;
+  align-items: center;
+}
+#Projets .slider-container .slider .slides .slide .slide-text {
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 8%;
+  left: 5%;
+}
+
+#Footer {
+  height: 100vh;
+  background-color: #3d4852;
+}
+
+/*# sourceMappingURL=index.css.map */
