@@ -276,16 +276,19 @@ body {
   top: 40%;
   width: 25%;
   left: 5%;
+  font-style: italic;
   align-items: center;
 }
 
 #Projets .slider-container .slider .slides .slide .slide-text {
+  z-index: 5;
   text-transform: uppercase;
   font-size: 2.25vw;
+  width: fit-content;
   font-weight: bold;
   color: white;
   position: absolute;
-  top: 8%;
+  top: 10%;
   left: 5%;
   letter-spacing: 2px;
 }
