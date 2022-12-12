@@ -23,7 +23,3 @@ $("#contacterTXT").on("click", function () {
   }
 });
 
-$(".draggable").draggable();
-$(".draggable").throwable();
-$(".draggable").css({"position": "absolute"});
-
