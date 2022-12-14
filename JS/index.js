@@ -3,6 +3,7 @@ $(document).on("ready", function () {
   $("#Presentation").hide();
   $(".coord").hide();
   $("#contacterTXT").text("Mes liens");
+  $(".pres-proj").hide();
 });
 
 // Animation pour cacher/afficher l'image et le texte de présentation
@@ -21,5 +22,15 @@ $("#contacterTXT").on("click", function () {
     $(".contact").show();
     $(".coord").hide();
   }
+});
+
+$(".image-proj").on("click", function () {
+  $(".pres-proj").show();
+  $(".image-proj").hide();
+});
+
+$(".pres-proj").on("click", function () {
+  $(".pres-proj").hide();
+  $(".image-proj").show();
 });
 

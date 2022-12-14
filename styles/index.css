@@ -45,6 +45,11 @@ body {
   height: 10vh;
   display: flex;
   align-items: center;
+  opacity: 0.5;
+}
+
+#Home #BarreNav:hover {
+  opacity: 1;
 }
 
 #Home #BarreNav ul {
@@ -249,7 +254,8 @@ body {
 #Projets .slider-container .slider .slides .slide {
   z-index: 0;
   display: flex;
-  align-items: 0;
+  align-items: center;
+  flex-direction: column;
   flex-shrink: 0;
   width: 100%;
   height: 100vh;
@@ -260,40 +266,41 @@ body {
 }
 
 #Projets .slider-container .slider .slides .slide img {
-  position: absolute;
-  right: 0;
-  height: 100%;
-  width: 65%;
+  margin: auto;
+  height: 70%;
+  width: 85%;
+  border-radius: 75px;
 }
 
-#Projets .slider-container .slider .slides .slide .description {
+#Projets .slider-container .slider .slides .slide .pres-proj {
+  height: 70%;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+}
+
+#Projets .slider-container .slider .slides .slide .pres-proj .description {
   color: white;
   line-height: 4vh;
   letter-spacing: 1.5px;
-  font-size: 0.8vw;
-  display: flex;
-  position: absolute;
-  top: 40%;
-  width: 25%;
-  left: 5%;
+  font-size: 10px;
   font-style: italic;
   align-items: center;
+  width: 50%;
 }
 
-#Projets .slider-container .slider .slides .slide .slide-text {
+#Projets .slider-container .slider .slides .slide .pres-proj .slide-text {
   z-index: 5;
   text-transform: uppercase;
   font-size: 2.25vw;
   width: fit-content;
   font-weight: bold;
   color: white;
-  position: absolute;
-  top: 10%;
-  left: 5%;
   letter-spacing: 2px;
 }
 
-#Footer {
+#CV {
   height: 100vh;
-  background-color: #215721;
 }
