@@ -48,7 +48,6 @@ body {
 }
 
 #Home #BarreNav .nav-links ul li a:active {
-  color: red;
   font-weight: 600;
 }
 
