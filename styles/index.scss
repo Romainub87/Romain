@@ -3,16 +3,20 @@
 $orange: rgb(255, 102, 0);
 $background: linear-gradient(
   157deg,
-
   rgba(235, 11, 9, 1) 0%,
   rgba(248, 102, 3, 1) 44%,
   rgba(255, 147, 0, 1) 74%,
   rgba(221, 226, 13, 1) 100%
 );
 
-body {
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
   background: $background;
   min-width: 100%;
   min-height: 100%;
@@ -22,60 +26,86 @@ body {
   scroll-snap-type: x mandatory;
 }
 
-// Style du logo
-#logoEmplacement {
-  position: absolute;
-  right: 0;
-  z-index: 2;
-
-  #Logo {
-    height: 10vh;
-    background-color: black;
-  }
-}
-
 // Style de la section Home
 #Home {
   height: 100vh;
 
   // Style de la barre Nav
   #BarreNav {
-    z-index: 5;
+    position: absolute;
     height: 10vh;
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
     align-items: center;
 
-    ul {
-      list-style-type: none;
-      display: flex;
-      position: fixed;
-      background-color: #000000;
-      margin: 0;
-      margin-left: 10px;
-      border-radius: 100px;
-      padding: 20px;
+    .nav-btn {
+      display: none;
+      position: absolute;
+      width: 35px;
+      left: 50px;
+      top: 50px;
+    }
 
-      .item-nav {
+    .nav-links {
+      ul {
         display: flex;
-        position: relative;
-        flex-direction: column;
-        margin-left: 30px;
-        padding-right: 10px;
 
-        &:nth-child(1) {
-          margin-left: 0;
-          padding-left: 10px;
-        }
+        li {
+          margin: 0 25px;
 
-        .lien-nav {
-          color: white;
-          text-decoration-line: none;
-
-          &:hover {
-            color: $orange;
+          a {
+            &:active {
+              color: red;
+              font-weight: 600;
+            }
           }
         }
       }
+    }
+
+    @media screen and (max-width: 900px) {
+      .nav-btn {
+        z-index: 7;
+        display: block;
+      }
+
+      .nav-links {
+        z-index: 6;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.1);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(5px);
+        margin-left: -100%;
+        transition: all 0.5s ease-in-out;
+
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          li {
+            margin: 25px 0;
+            font-size: 1.2em;
+          }
+        }
+      }
+
+      .mobile-menu {
+        margin-left: 0;
+      }
+    }
+
+    a {
+      color: white;
     }
   }
 

@@ -1,8 +1,13 @@
 @charset "UTF-8";
 /* Propriétés générales de la page */
-body {
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
   background: linear-gradient(157deg, #eb0b09 0%, #f86603 44%, #ff9300 74%, #dde20d 100%);
   min-width: 100%;
   min-height: 100%;
@@ -12,59 +17,77 @@ body {
   scroll-snap-type: x mandatory;
 }
 
-#logoEmplacement {
-  position: absolute;
-  right: 0;
-  z-index: 2;
-}
-
-#logoEmplacement #Logo {
-  height: 10vh;
-  background-color: black;
-}
-
 #Home {
   height: 100vh;
 }
 
 #Home #BarreNav {
-  z-index: 5;
+  position: absolute;
   height: 10vh;
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   align-items: center;
 }
 
-#Home #BarreNav ul {
-  list-style-type: none;
+#Home #BarreNav .nav-btn {
+  display: none;
+  position: absolute;
+  width: 35px;
+  left: 50px;
+  top: 50px;
+}
+
+#Home #BarreNav .nav-links ul {
   display: flex;
-  position: fixed;
-  background-color: #000000;
-  margin: 0;
-  margin-left: 10px;
-  border-radius: 100px;
-  padding: 20px;
 }
 
-#Home #BarreNav ul .item-nav {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  margin-left: 30px;
-  padding-right: 10px;
+#Home #BarreNav .nav-links ul li {
+  margin: 0 25px;
 }
 
-#Home #BarreNav ul .item-nav:nth-child(1) {
-  margin-left: 0;
-  padding-left: 10px;
+#Home #BarreNav .nav-links ul li a:active {
+  color: red;
+  font-weight: 600;
 }
 
-#Home #BarreNav ul .item-nav .lien-nav {
+@media screen and (max-width: 900px) {
+  #Home #BarreNav .nav-btn {
+    z-index: 7;
+    display: block;
+  }
+  #Home #BarreNav .nav-links {
+    z-index: 6;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    margin-left: -100%;
+    transition: all 0.5s ease-in-out;
+  }
+  #Home #BarreNav .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #Home #BarreNav .nav-links ul li {
+    margin: 25px 0;
+    font-size: 1.2em;
+  }
+  #Home #BarreNav .mobile-menu {
+    margin-left: 0;
+  }
+}
+
+#Home #BarreNav a {
   color: white;
-  text-decoration-line: none;
-}
-
-#Home #BarreNav ul .item-nav .lien-nav:hover {
-  color: #ff6600;
 }
 
 #Home #ensemble_pres {

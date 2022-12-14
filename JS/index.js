@@ -11,19 +11,6 @@ $("#titre_encadre").on("click", function () {
   $("#Presentation").toggle(1000, "swing");
 });
 
-// Animation pour cacher/afficher les coordonnées et les liens
-$("#contacterTXT").on("click", function () {
-  if ($("#contacterTXT").text() == "Mes liens") {
-    $("#contacterTXT").text("Mes coordonnées");
-    $(".contact").hide();
-    $(".coord").show();
-  } else {
-    $("#contacterTXT").text("Mes liens");
-    $(".contact").show();
-    $(".coord").hide();
-  }
-});
-
 $(".image-proj").on("click", function () {
   $(".pres-proj").show();
   $(".image-proj").hide();
@@ -32,5 +19,9 @@ $(".image-proj").on("click", function () {
 $(".pres-proj").on("click", function () {
   $(".pres-proj").hide();
   $(".image-proj").show();
+});
+
+$(".nav-btn").on("click", function () {
+  $(".nav-links").toggleClass("mobile-menu");
 });
 
