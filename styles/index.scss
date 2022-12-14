@@ -276,8 +276,8 @@ $orange: rgb(255, 102, 0);
          
 
           .pres-proj {
-            height: 70%;
-            width: 85%;
+            height: fit-content;
+            width: 50%;
             display: flex;
             align-items: center;
             margin: auto;
@@ -288,16 +288,16 @@ $orange: rgb(255, 102, 0);
               line-height: 4vh;
               letter-spacing: 1.5px;
               font-size: 10px;
+              width: fit-content;
               font-style: italic;
               align-items: center;
-              width: 50%;
+              padding: 15px;
             }
 
             .slide-text {
               z-index: 5;
               text-transform: uppercase;
-              font-size: 2.25vw;
-              width: fit-content;
+              font-size: larger;
               font-weight: bold;
               color: white;
               letter-spacing: 2px;
