@@ -35,7 +35,6 @@ body {
 }
 
 #Home #BarreNav ul {
-  z-index: 5;
   list-style-type: none;
   display: flex;
   position: fixed;
