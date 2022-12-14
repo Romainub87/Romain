@@ -25,3 +25,7 @@ $(".nav-btn").on("click", function () {
   $(".nav-links").toggleClass("mobile-menu");
 });
 
+$('.item-nav').on("click", function () {
+  $(".nav-links").toggleClass("mobile-menu")
+});
+
