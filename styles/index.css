@@ -3,25 +3,13 @@
 body {
   padding: 0;
   margin: 0;
+  background: linear-gradient(157deg, #eb0b09 0%, #f86603 44%, #ff9300 74%, #dde20d 100%);
   min-width: 100%;
   min-height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #f5f5f5;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #3d4852;
-  border-radius: 8px;
 }
 
 #logoEmplacement {
@@ -37,19 +25,13 @@ body {
 
 #Home {
   height: 100vh;
-  background-color: #ff6600;
-  border-bottom: 10px solid whitesmoke;
 }
 
 #Home #BarreNav {
+  z-index: 5;
   height: 10vh;
   display: flex;
   align-items: center;
-  opacity: 0.5;
-}
-
-#Home #BarreNav:hover {
-  opacity: 1;
 }
 
 #Home #BarreNav ul {
@@ -227,7 +209,6 @@ body {
 
 #Projets {
   height: 100vh;
-  background-color: #3d4852;
 }
 
 #Projets .slider-container {
@@ -245,7 +226,7 @@ body {
 
 #Projets .slider-container .slider .slides {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   font-family: "Merriweather", "sans-serif";
@@ -305,4 +286,17 @@ body {
 
 #CV {
   height: 100vh;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3d4852;
+  border-radius: 8px;
 }

@@ -1,28 +1,25 @@
 /* Propriétés générales de la page */
 
+$orange: rgb(255, 102, 0);
+$background: linear-gradient(
+  157deg,
+
+  rgba(235, 11, 9, 1) 0%,
+  rgba(248, 102, 3, 1) 44%,
+  rgba(255, 147, 0, 1) 74%,
+  rgba(221, 226, 13, 1) 100%
+);
+
 body {
   padding: 0;
   margin: 0;
+  background: $background;
   min-width: 100%;
   min-height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
-}
-
-// Style de la scrollBar
-::-webkit-scrollbar-track {
-  background-color: #f5f5f5;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #3d4852;
-  border-radius: 8px;
 }
 
 // Style du logo
@@ -37,23 +34,16 @@ body {
   }
 }
 
-$orange: rgb(255, 102, 0);
-
 // Style de la section Home
 #Home {
   height: 100vh;
-  background-color: $orange;
-  border-bottom: 10px solid whitesmoke;
 
   // Style de la barre Nav
   #BarreNav {
+    z-index: 5;
     height: 10vh;
     display: flex;
     align-items: center;
-    opacity: 0.5;
-    &:hover {
-      opacity: 1;
-    }
 
     ul {
       z-index: 5;
@@ -232,7 +222,6 @@ $orange: rgb(255, 102, 0);
 
 #Projets {
   height: 100vh;
-  background-color: #3d4852;
 
   .slider-container {
     display: flex;
@@ -247,11 +236,10 @@ $orange: rgb(255, 102, 0);
 
       .slides {
         display: flex;
-        overflow-x: scroll;
+        overflow-x: hidden;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
         font-family: "Merriweather", "sans-serif";
-        
 
         .slide {
           z-index: 0;
@@ -274,8 +262,6 @@ $orange: rgb(255, 102, 0);
             max-height: 80%;
             border-radius: 75px;
           }
-
-         
 
           .pres-proj {
             height: fit-content;
@@ -305,8 +291,6 @@ $orange: rgb(255, 102, 0);
               letter-spacing: 2px;
             }
           }
-
-         
         }
       }
     }
@@ -315,4 +299,18 @@ $orange: rgb(255, 102, 0);
 
 #CV {
   height: 100vh;
+}
+
+// Style de la scrollBar
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3d4852;
+  border-radius: 8px;
 }
