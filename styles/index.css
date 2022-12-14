@@ -267,8 +267,10 @@ body {
 
 #Projets .slider-container .slider .slides .slide img {
   margin: auto;
-  height: 70%;
-  width: 85%;
+  height: auto;
+  width: auto;
+  max-width: 80%;
+  max-height: 80%;
   border-radius: 75px;
 }
 
