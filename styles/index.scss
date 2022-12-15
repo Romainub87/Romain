@@ -18,8 +18,6 @@ $background: linear-gradient(
 
 body {
   background: $background;
-  min-width: 100%;
-  min-height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -32,7 +30,8 @@ body {
 
   // Style de la barre Nav
   #BarreNav {
-    position: absolute;
+    position: fixed;
+    z-index: 100;
     height: 10vh;
     display: flex;
     justify-content: space-between;
@@ -88,7 +87,6 @@ body {
         backdrop-filter: blur(5px);
         margin-left: -100%;
         transition: all 0.5s ease-in-out;
-
 
         ul {
           display: flex;
@@ -253,84 +251,90 @@ body {
 }
 
 #Projets {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  min-height: 100vh;
+  height: auto;
+  width: 75vw;
 
-  .slider-container {
+  .titre-section-projets {
+    color: white;
+    font-family: "Merriweather", "sans-serif";
+    font-size: 7vh;
+    margin: 3vh;
+  }
+
+  .div-liste-projets {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
 
-    .slider {
-      width: 100%;
-      height: 100vh;
-      text-align: center;
+    .ul-liste-projets {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-family: "Merriweather", "sans-serif";
 
-      .slides {
-        display: flex;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-        scroll-snap-type: x mandatory;
+      .item-projet {
+        width: 30vh;
+        height: 30vh;
+        margin: 10px;
         font-family: "Merriweather", "sans-serif";
 
-        .slide {
-          z-index: 0;
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          flex-shrink: 0;
-          width: 100%;
-          height: 100vh;
-          margin-right: 0px;
-          transform-origin: center center;
-          transform: scale(1);
-          scroll-snap-align: center;
+        .pres-proj {
+          display: none;
+          color: white;
+        }
 
-          img {
-            margin: auto;
-            height: auto;
-            width: auto;
-            max-width: 80%;
-            max-height: 80%;
-            border-radius: 75px;
+        img {
+          display: flex;
+          height: 100%;
+          width: 100%;
+          border-radius: 25px;
+        }
+
+        &:hover {
+          border: 1px dashed rgb(215, 57, 13);
+          border-radius: 25px;
+          .pres-proj {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 80%;
+            width: 100%;
+
+            .titre-item-projet {
+              text-transform: uppercase;
+              font-size: large;
+              margin: 25px;
+            }
+
+            .description-projet {
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              
+              margin: 5px 25px;
+
+              .langage {
+                margin: 5px;
+                padding: 5px;
+                text-align: center;
+                background-color: rgb(215, 57, 13);
+                border-radius: 5px;
+              }
+            }
           }
 
-          .pres-proj {
-            height: fit-content;
-            width: 50%;
-            display: flex;
-            align-items: center;
-            margin: auto;
-            flex-direction: column;
-
-            .description {
-              color: white;
-              line-height: 4vh;
-              letter-spacing: 1.5px;
-              font-size: 10px;
-              width: fit-content;
-              font-style: italic;
-              align-items: center;
-              padding: 15px;
-            }
-
-            .slide-text {
-              z-index: 5;
-              text-transform: uppercase;
-              font-size: larger;
-              font-weight: bold;
-              color: white;
-              letter-spacing: 2px;
-            }
+          img {
+            display: none;
           }
         }
       }
     }
   }
-}
-
-#CV {
-  height: 100vh;
 }
 
 // Style de la scrollBar
