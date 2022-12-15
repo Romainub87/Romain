@@ -9,6 +9,20 @@ $background: linear-gradient(
   rgba(221, 226, 13, 1) 100%
 );
 
+// Style de la scrollBar
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3d4852;
+  border-radius: 8px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -43,8 +57,8 @@ body {
       display: none;
       position: absolute;
       width: 35px;
-      left: 50px;
-      top: 50px;
+      left: 20px;
+      top: 20px;
     }
 
     .nav-links {
@@ -116,16 +130,33 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 50vw;
+
+    .click-on {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      font-size: 3vh;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 3vh;
+      letter-spacing: 2px;
+
+      &:after {
+        content: "⌄";
+        text-align: center;
+        margin-top: 0;
+      }
+    }
 
     #titre_encadre {
       background-color: white;
       margin: auto;
-      padding-left: 15px;
-      padding-right: 25px;
+      font-size: 3vw;
+      padding: 0 15px;
       border-radius: 25px;
       border: 4px solid black;
-      box-shadow: 4px 4px 8px;
-      margin-bottom: 2em;
       transform: scale(1);
       transition: transform 500ms ease-in-out;
       cursor: pointer;
@@ -133,48 +164,77 @@ body {
       &:hover {
         background-color: black;
         color: white;
-        transform: scale(1.25);
+        transform: scale(1.15);
         transition: transform 500ms ease-in-out;
       }
 
       #titre {
         margin: 15px;
         text-align: center;
-        font-size: 3.5em;
         font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
       }
     }
 
     #Presentation {
       display: flex;
+      margin: auto;
+      align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      margin-top: 25px;
       #imageProfil {
         display: flex;
-        border-radius: 35px;
-        height: 10em;
+        margin: 35px;
+        border-radius: 25px;
+        height: auto;
+        width: 30%;
         border: 3px solid white;
         box-shadow: -5px 5px 10px;
         transform: scale(1);
         transition: transform 500ms ease-in-out;
 
         &:hover {
-          transform: scale(1.25);
+          transform: scale(1.15);
           transition: transform 500ms ease-in-out;
         }
       }
 
       #presTexte {
-        width: 210px;
+        margin: 35px;
+        width: 50%;
         text-align: justify;
         font-weight: bold;
         line-height: normal;
+        font-size: 1.5vw;
         transform: scale(1);
         transition: transform 500ms ease-in-out;
 
         &:hover {
-          transform: scale(1.25);
+          transform: scale(1);
           transition: transform 500ms ease-in-out;
+        }
+      }
+    }
+    @media screen and (max-width: 750px) {
+      #Presentation {
+        display: flex;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+        #imageProfil {
+          display: flex;
+          border-radius: 25px;
+          height: 25vh;
+          width: auto;
+          border: 3px solid white;
+          box-shadow: -5px 5px 10px;
+
+          &:hover {
+            transform: scale(1);
+          }
+        }
+        #presTexte {
+          display: none;
         }
       }
     }
@@ -267,8 +327,6 @@ body {
   }
 
   .div-liste-projets {
-    display: flex;
-
     .ul-liste-projets {
       display: flex;
       align-items: center;
@@ -291,6 +349,7 @@ body {
           display: flex;
           height: 100%;
           width: 100%;
+          border: none;
           border-radius: 25px;
         }
 
@@ -315,7 +374,7 @@ body {
               display: flex;
               align-items: center;
               flex-wrap: wrap;
-              
+
               margin: 5px 25px;
 
               .langage {
@@ -335,18 +394,4 @@ body {
       }
     }
   }
-}
-
-// Style de la scrollBar
-::-webkit-scrollbar-track {
-  background-color: #f5f5f5;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #3d4852;
-  border-radius: 8px;
 }

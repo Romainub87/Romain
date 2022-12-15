@@ -8,6 +8,7 @@ $(document).on("ready", function () {
 // Animation pour cacher/afficher l'image et le texte de présentation
 $("#titre_encadre").on("click", function () {
   $("#Presentation").toggle(1000, "swing");
+  $(".click-on").toggle(1000, "swing");
 });
 
 $(".nav-btn").on("click", function () {
