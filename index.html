@@ -129,6 +129,24 @@
                 </ul>
             </div>
         </section>
+        <section id="Footer">
+            <h1 class="form-title">Contact</h1>
+            <form class="form" method="post" action="./PHP/mail.php">
+                <div class="form-elem">
+                    <label for="">Mail</label>
+                    <input type="mail" name="mail" required>
+                </div>
+                <div class="form-elem">
+                    <label for="">Sujet</label>
+                    <input type="text" name="sujet" required>
+                </div>
+                <div class="form-elem">
+                    <label for="">Message</label>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+                <input type="submit" value="Envoyer">
+            </form>
+        </section>
     </body>
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>

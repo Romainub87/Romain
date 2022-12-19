@@ -6,7 +6,7 @@ $background: linear-gradient(
   rgba(235, 11, 9, 1) 0%,
   rgba(248, 102, 3, 1) 44%,
   rgba(255, 147, 0, 1) 74%,
-  rgba(221, 226, 13, 1) 100%
+  rgb(197, 200, 12) 100%
 );
 
 // Style de la scrollBar
@@ -32,7 +32,7 @@ $background: linear-gradient(
 
 body {
   background: $background;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Merriweather", "sans-serif";
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
@@ -137,8 +137,7 @@ body {
       flex-direction: column;
       text-align: center;
       color: white;
-      font-size: 3vh;
-      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 2.5vh;
       text-transform: uppercase;
       margin-bottom: 3vh;
       letter-spacing: 2px;
@@ -164,14 +163,13 @@ body {
       &:hover {
         background-color: black;
         color: white;
-        transform: scale(1.15);
+        transform: scale(1.05);
         transition: transform 500ms ease-in-out;
       }
 
       #titre {
         margin: 15px;
         text-align: center;
-        font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
       }
     }
 
@@ -186,7 +184,7 @@ body {
         margin: 35px;
         border-radius: 25px;
         height: auto;
-        width: 30%;
+        width: 23%;
         border: 3px solid white;
         box-shadow: -5px 5px 10px;
         transform: scale(1);
@@ -204,7 +202,7 @@ body {
         text-align: justify;
         font-weight: bold;
         line-height: normal;
-        font-size: 1.5vw;
+        font-size: 1.25vw;
         transform: scale(1);
         transition: transform 500ms ease-in-out;
 
@@ -349,7 +347,7 @@ body {
           height: 100%;
           width: 100%;
           border: none;
-          border-radius: 25px;
+          border-radius: 35px;
         }
 
         &:hover {
@@ -391,6 +389,57 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+#Footer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+
+
+  .form-title {
+    font-size: 7vh;
+    padding: 25px;
+    color: white;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    align-items: center;
+    
+
+    .form-elem{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin: 3vh;
+
+      label {
+        display: flex;
+        width: 100%;
+        margin-bottom: 1vh;
+      }
+      input {
+        width: 30vw;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+      }
+
+      #message {
+        padding: 10px;
+        width: 30vw;
+        height: 15vh;
+        border-radius: 15px;
+        border: none;
+      }
+    
     }
   }
 }

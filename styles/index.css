@@ -21,8 +21,8 @@
 }
 
 body {
-  background: linear-gradient(157deg, #eb0b09 0%, #f86603 44%, #ff9300 74%, #dde20d 100%);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(157deg, #eb0b09 0%, #f86603 44%, #ff9300 74%, #c5c80c 100%);
+  font-family: "Merriweather", "sans-serif";
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
@@ -119,8 +119,7 @@ body {
   flex-direction: column;
   text-align: center;
   color: white;
-  font-size: 3vh;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2.5vh;
   text-transform: uppercase;
   margin-bottom: 3vh;
   letter-spacing: 2px;
@@ -147,14 +146,13 @@ body {
 #Home #ensemble_pres #titre_encadre:hover {
   background-color: black;
   color: white;
-  transform: scale(1.15);
+  transform: scale(1.05);
   transition: transform 500ms ease-in-out;
 }
 
 #Home #ensemble_pres #titre_encadre #titre {
   margin: 15px;
   text-align: center;
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
 #Home #ensemble_pres #Presentation {
@@ -170,7 +168,7 @@ body {
   margin: 35px;
   border-radius: 25px;
   height: auto;
-  width: 30%;
+  width: 23%;
   border: 3px solid white;
   box-shadow: -5px 5px 10px;
   transform: scale(1);
@@ -188,7 +186,7 @@ body {
   text-align: justify;
   font-weight: bold;
   line-height: normal;
-  font-size: 1.5vw;
+  font-size: 1.25vw;
   transform: scale(1);
   transition: transform 500ms ease-in-out;
 }
@@ -331,7 +329,7 @@ body {
   height: 100%;
   width: 100%;
   border: none;
-  border-radius: 25px;
+  border-radius: 35px;
 }
 
 #Projets .div-liste-projets .ul-liste-projets .item-projet:hover {
@@ -371,4 +369,53 @@ body {
 
 #Projets .div-liste-projets .ul-liste-projets .item-projet:hover img {
   display: none;
+}
+
+#Footer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+}
+
+#Footer .form-title {
+  font-size: 7vh;
+  padding: 25px;
+  color: white;
+}
+
+#Footer .form {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  align-items: center;
+}
+
+#Footer .form .form-elem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3vh;
+}
+
+#Footer .form .form-elem label {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1vh;
+}
+
+#Footer .form .form-elem input {
+  width: 30vw;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+#Footer .form .form-elem #message {
+  padding: 10px;
+  width: 30vw;
+  height: 15vh;
+  border-radius: 15px;
+  border: none;
 }
