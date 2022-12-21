@@ -68,6 +68,22 @@ body {
         li {
           margin: 0 25px;
 
+          .trait {
+            margin-top: 1px;
+            background-color: white;
+            border-radius: 25px;
+            width: 0%;
+            height: 2px;
+            transition: 0.5s;
+          }
+
+          &:hover {
+            .trait {
+              width: 100%;
+              transition: 0.5s;
+            }
+          }
+
           a {
             &:active {
               font-weight: 600;
@@ -399,7 +415,6 @@ body {
   height: 100vh;
   align-items: center;
 
-
   .form-title {
     font-size: 7vh;
     padding: 25px;
@@ -411,9 +426,8 @@ body {
     flex-direction: column;
     line-height: normal;
     align-items: center;
-    
 
-    .form-elem{
+    .form-elem {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -439,14 +453,13 @@ body {
         border-radius: 15px;
         border: none;
       }
-    
     }
 
     .submit {
       padding: 15px;
       border-radius: 15px;
       border: none;
-      font-family: 'Merriweather', sans-serif;
+      font-family: "Merriweather", sans-serif;
       font-weight: 700;
     }
   }

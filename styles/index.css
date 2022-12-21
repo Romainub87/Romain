@@ -59,6 +59,20 @@ body {
   margin: 0 25px;
 }
 
+#Home #BarreNav .nav-links ul li .trait {
+  margin-top: 1px;
+  background-color: white;
+  border-radius: 25px;
+  width: 0%;
+  height: 2px;
+  transition: 0.5s;
+}
+
+#Home #BarreNav .nav-links ul li:hover .trait {
+  width: 100%;
+  transition: 0.5s;
+}
+
 #Home #BarreNav .nav-links ul li a:active {
   font-weight: 600;
 }
@@ -424,6 +438,6 @@ body {
   padding: 15px;
   border-radius: 15px;
   border: none;
-  font-family: 'Merriweather', sans-serif;
+  font-family: "Merriweather", sans-serif;
   font-weight: 700;
 }
