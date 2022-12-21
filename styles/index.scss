@@ -32,7 +32,7 @@ $background: linear-gradient(
 
 body {
   background: $background;
-  font-family: "Merriweather", "sans-serif";
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
@@ -70,11 +70,12 @@ body {
 
           .trait {
             margin-top: 1px;
-            background-color: white;
+            background: white;
             border-radius: 25px;
             width: 0%;
             height: 2px;
             transition: 0.5s;
+            background-position: right;
           }
 
           &:hover {

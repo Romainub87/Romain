@@ -22,7 +22,7 @@
 
 body {
   background: linear-gradient(157deg, #eb0b09 0%, #f86603 44%, #ff9300 74%, #c5c80c 100%);
-  font-family: "Merriweather", "sans-serif";
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
@@ -61,11 +61,12 @@ body {
 
 #Home #BarreNav .nav-links ul li .trait {
   margin-top: 1px;
-  background-color: white;
+  background: white;
   border-radius: 25px;
   width: 0%;
   height: 2px;
   transition: 0.5s;
+  background-position: right;
 }
 
 #Home #BarreNav .nav-links ul li:hover .trait {
